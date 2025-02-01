@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | E-commerce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- Navigation -->
+    <header class="w-full flex justify-between items-center px-20 py-4 border-b">
+        <h1 class="text-2xl font-bold">Shop.</h1>
+        <nav class="flex gap-6 text-lg">
+            <a href="#" class="hover:underline">Home</a>
+            <a href="#" class="hover:underline">Products</a>
+            <a href="#" class="hover:underline">Cart</a>
+            <a href="#" class="hover:underline">My account</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="flex px-20 py-10 h-[90vh] w-full">
+
+        <!-- Sidebar -->
+        <aside class="w-1/5 h-full">
+            <div class="w-full h-full flex flex-col justify-between pr-10 py-10">
+                <div class="flex flex-col gap-4">
+                    <div class="mb-6">
+                        <label class="text-lg font-semibold">Sort by :</label>
+                        <select class="border p-2 w-full mt-2">
+                            <option>Popular</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                        </select>
+                    </div>
+                    <div>
+                        <ul class="mt-3 space-y-2">
+                            <li><a href="#" class="text-gray-600 hover:underline">New Collection</a></li>
+                            <li><a href="#" class="font-bold">All Products</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Discounted Products</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-10">
+                    <p class="text-lg font-semibold">Filter by :</p>
+                    <ul class="mt-3 space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:underline">Availabilty</a></li>
+                        <li><a href="#" class="text-gray-600 hover:underline">Discounted</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Product Grid -->
+        <section class="w-4/5 grid grid-cols-4 gap-6">
+            <!-- Product Cards -->
+            <div class="bg-pink-100 p-4 rounded-md">
+                <img src="https://via.placeholder.com/200" alt="Clinge Bag" class="w-full rounded-md">
+                <p class="text-lg font-bold mt-3">Clinge Bag</p>
+                <p class="text-gray-700">₹1200</p>
+                <button class="bg-white rounded-full p-2 mt-3 shadow hover:bg-gray-200">+</button>
+            </div>
+
+            <div class="bg-blue-100 p-4 rounded-md">
+                <img src="https://via.placeholder.com/200" alt="Backpack" class="w-full rounded-md">
+                <p class="text-lg font-bold mt-3">Backpack</p>
+                <p class="text-gray-700">₹1100</p>
+                <button class="bg-white rounded-full p-2 mt-3 shadow hover:bg-gray-200">+</button>
+            </div>
+
+            <div class="bg-yellow-100 p-4 rounded-md">
+                <img src="https://via.placeholder.com/200" alt="Multipurpose Bag" class="w-full rounded-md">
+                <p class="text-lg font-bold mt-3">Multipurpose</p>
+                <p class="text-gray-700">₹100</p>
+                <button class="bg-white rounded-full p-2 mt-3 shadow hover:bg-gray-200">+</button>
+            </div>
+
+            <div class="bg-pink-200 p-4 rounded-md">
+                <img src="https://via.placeholder.com/200" alt="Pink Attack" class="w-full rounded-md">
+                <p class="text-lg font-bold mt-3">Pink Attack</p>
+                <p class="text-gray-700">₹1400 <span class="text-red-500 text-sm">-25%</span></p>
+                <button class="bg-white rounded-full p-2 mt-3 shadow hover:bg-gray-200">+</button>
+            </div>
+
+            <div class="bg-gray-200 p-4 rounded-md">
+                <img src="https://via.placeholder.com/200" alt="The Stud" class="w-full rounded-md">
+                <p class="text-lg font-bold mt-3">The Stud</p>
+                <p class="text-gray-700">₹1100</p>
+                <button class="bg-white rounded-full p-2 mt-3 shadow hover:bg-gray-200">+</button>
+            </div>
+
+            <div class="bg-yellow-200 p-4 rounded-md">
+                <img src="https://via.placeholder.com/200" alt="Surprise" class="w-full rounded-md">
+                <p class="text-lg font-bold mt-3">Surprise</p>
+                <p class="text-gray-700">₹1100</p>
+                <button class="bg-white rounded-full p-2 mt-3 shadow hover:bg-gray-200">+</button>
+            </div>
+
+            <div class="bg-black text-white p-4 rounded-md">
+                <img src="https://via.placeholder.com/200" alt="Supreme" class="w-full rounded-md">
+                <p class="text-lg font-bold mt-3">Supreme</p>
+                <p class="text-gray-400">₹1800</p>
+                <button class="bg-gray-800 rounded-full p-2 mt-3 shadow hover:bg-gray-700">+</button>
+            </div>
+
+            <div class="bg-gray-100 p-4 rounded-md">
+                <img src="https://via.placeholder.com/200" alt="The Daily" class="w-full rounded-md">
+                <p class="text-lg font-bold mt-3">The Daily</p>
+                <p class="text-gray-700">₹100</p>
+                <button class="bg-white rounded-full p-2 mt-3 shadow hover:bg-gray-200">+</button>
+            </div>
+
+        </section>
+    </div>
+
+</body>
+</html>

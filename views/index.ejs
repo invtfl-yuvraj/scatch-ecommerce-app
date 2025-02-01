@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scatch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="w-full flex bg-slate-200 p-4 px-20">
+            <p class="font-bold text-xl">Scatch</p>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <div class="w-full lg:h-[100vh] h-full flex flex-wrap lg:flex-nowrap gap-10 items-center md:px-40 px-0 justify-center lg:justify-none">
+
+        <!-- Sign up Section -->
+        <div id="signupSection" class="w-full h-full py-10 lg:py-0 flex flex-col justify-center px-10 gap-8 bg-slate-200 transition-all duration-300">
+
+            <div>
+                <h2 class="text-3xl font-bold">Welcome to <span class="text-5xl text-blue-400">Scatch</span></h2>
+                <h3 class="text-2xl font-bold">Create your account</h3>
+            </div>
+
+            <div class="flex flex-col w-full gap-4"> 
+                <input class="signup-input p-2 rounded-md transition-all duration-300" type="text" placeholder="Full Name" name="fullname" required>
+                <input class="signup-input p-2 rounded-md transition-all duration-300" type="email" placeholder="Email" name="email" required>
+                <input class="signup-input p-2 rounded-md transition-all duration-300" type="password" placeholder="Password" name="password" required>
+                <input class="p-2 bg-blue-400 px-10 w-1/2 rounded-full text-white font-bold cursor-pointer" value="Signup" type="submit">
+            </div>
+
+        </div>
+
+        <!-- OR -->
+        <div class="w-1/4 h-full flex flex-col justify-center items-center">
+            <div class="bg-blue-400 w-12 h-12 rounded-full flex items-center justify-center">
+                <p class="text-center text-2xl text-white font-bold">or</p>
+            </div>
+        </div>
+
+        <!-- Login Section -->
+        <div id="loginSection" class="w-full h-full py-10 lg:py-0 flex flex-col justify-center px-10 gap-8 transition-all duration-300">
+
+            <div>
+                <h3 class="text-2xl font-bold">Login to your account</h3>
+            </div>
+
+            <div class="flex flex-col w-full gap-4"> 
+                <input class="login-input p-2 rounded-md transition-all duration-300" type="email" placeholder="Email" name="email" required>
+                <input class="login-input p-2 rounded-md transition-all duration-300" type="password" placeholder="Password" name="password" required>
+                <input class="p-2 bg-blue-400 px-10 w-1/2 rounded-full text-white font-bold cursor-pointer" value="Login" type="submit">
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        const signupSection = document.getElementById("signupSection");
+        const loginSection = document.getElementById("loginSection");
+        const signupInputs = document.querySelectorAll(".signup-input");
+        const loginInputs = document.querySelectorAll(".login-input");
+
+        function switchBackground(activeSection) {
+            if (activeSection === "signup") {
+                signupSection.classList.add("bg-slate-200");
+                loginSection.classList.remove("bg-slate-200");
+
+                signupInputs.forEach(input => input.classList.add("bg-white"));
+                loginInputs.forEach(input => input.classList.remove("bg-white"));
+                loginInputs.forEach(input => input.classList.add("bg-slate-200"));
+            } else {
+                loginSection.classList.add("bg-slate-200");
+                signupSection.classList.remove("bg-slate-200");
+
+                loginInputs.forEach(input => input.classList.add("bg-white"));
+                signupInputs.forEach(input => input.classList.remove("bg-white"));
+                signupInputs.forEach(input => input.classList.add("bg-slate-200"));
+            }
+        }
+
+        signupInputs.forEach(input => {
+            input.addEventListener("click", () => switchBackground("signup"));
+        });
+
+        loginInputs.forEach(input => {
+            input.addEventListener("click", () => switchBackground("login"));
+        });
+
+        // Set initial state (signup active)
+        switchBackground("signup");
+    </script>
+
+</body>
+
+</html>
