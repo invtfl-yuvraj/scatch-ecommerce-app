@@ -1,12 +1,15 @@
 const mongoose = require("mongoose");
 
+const config = require("config");
+const dbgr = require("debug")("development:mongoose");
+
 mongoose
-.connect("mongodb://127.0.0.1:27017/scatch")
-.then(()=>{
-    console.log("Mongoose Connected!!");
+.connect(`${config.get("MONGODB_URI")}/scatch`)
+.then(()=>{ 
+    dbgr("Database Connected!!");
 })
 .catch((err)=>{
-    console.log("Error in connecting mongoose :", err.message);
+    dbgr("Error in connecting :", err.message);
 });
 
 module.exports = mongoose.connection;
