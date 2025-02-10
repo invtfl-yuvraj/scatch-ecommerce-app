@@ -14,18 +14,18 @@ const usersRouter = require("./routes/usersRouter");
 const productsRouter = require("./routes/productsRouter");
 const indexRouter = require("./routes/index");
 
-app.use(session({ 
-    secret:'yuvraj', 
-    saveUninitialized: true, 
-    resave: true
-})); 
-app.use(flash());
-
 app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(cookieParser());
+
+app.use(session({ 
+    secret: process.env.EXPRESS_SESSION_SECRET, 
+    saveUninitialized: true, 
+    resave: false
+}));
+app.use(flash());
 
 app.use("/", indexRouter);
 app.use("/owners", ownersRouter);

@@ -10,11 +10,20 @@
 
 <body>
 
-    <header>
-        <nav class="w-full flex bg-slate-200 p-4 px-20">
+    <header class="relative z-20">
+        <nav class="w-full flex bg-slate-200 p-4 px-20 z-20">
             <p class="font-bold text-xl">Scatch</p>
         </nav>
     </header>
+
+    <% if (error.length > 0) { %>
+        <div class="absolute z-10 top-20 left-1/2 -translate-x-1/2 -translate-y-1/2 p-2 px-6 rounded-lg bg-red-500">
+            <span class="inline-block mt-1 mb-1 font-semibold text-white">
+            <%= error%>
+        </span>
+
+        </div>
+       <% } %>
 
     <!-- Home -->
     <div class="w-full lg:h-[100vh] h-full flex flex-wrap lg:flex-nowrap gap-10 items-center md:px-40 px-0 justify-center lg:justify-none">
@@ -27,12 +36,12 @@
                 <h3 class="text-2xl font-bold">Create your account</h3>
             </div>
 
-            <div class="flex flex-col w-full gap-4"> 
+            <form class="flex flex-col w-full gap-4" method="post" action="/users/register"> 
                 <input class="signup-input p-2 rounded-md transition-all duration-300" type="text" placeholder="Full Name" name="fullname" required>
                 <input class="signup-input p-2 rounded-md transition-all duration-300" type="email" placeholder="Email" name="email" required>
                 <input class="signup-input p-2 rounded-md transition-all duration-300" type="password" placeholder="Password" name="password" required>
                 <input class="p-2 bg-blue-400 px-10 w-1/2 rounded-full text-white font-bold cursor-pointer" value="Signup" type="submit">
-            </div>
+            </form>
 
         </div>
 
@@ -50,11 +59,11 @@
                 <h3 class="text-2xl font-bold">Login to your account</h3>
             </div>
 
-            <div class="flex flex-col w-full gap-4"> 
+            <form class="flex flex-col w-full gap-4" method = "post" action="/users/login"> 
                 <input class="login-input p-2 rounded-md transition-all duration-300" type="email" placeholder="Email" name="email" required>
                 <input class="login-input p-2 rounded-md transition-all duration-300" type="password" placeholder="Password" name="password" required>
                 <input class="p-2 bg-blue-400 px-10 w-1/2 rounded-full text-white font-bold cursor-pointer" value="Login" type="submit">
-            </div>
+            </form>
 
         </div>
 

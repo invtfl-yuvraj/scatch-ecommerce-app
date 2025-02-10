@@ -11,11 +11,11 @@
     <!-- Navigation -->
     <header class="w-full flex justify-between items-center px-20 py-4 border-b">
         <h1 class="text-2xl font-bold">Shop.</h1>
-        <nav class="flex gap-6 text-lg">
-            <a href="#" class="hover:underline">Home</a>
-            <a href="#" class="hover:underline">Products</a>
-            <a href="#" class="hover:underline">Cart</a>
-            <a href="#" class="hover:underline">My account</a>
+        <nav class="flex gap-6 text-md ">
+            <a href="#" class="transition-all duration-200 hover:scale-110 hover:text-blue-600 hover:font-semibold">Home</a>
+            <a href="#" class="transition-all duration-200 hover:scale-110 hover:text-blue-600 hover:font-semibold">Products</a>
+            <a href="#" class="transition-all duration-200 hover:scale-110 hover:text-blue-600 hover:font-semibold">Cart</a>
+            <a href="#" class="transition-all duration-200 hover:scale-110 hover:text-blue-600 hover:font-semibold">My account</a>
         </nav>
     </header>
 
@@ -36,30 +36,34 @@
                     </div>
                     <div>
                         <ul class="mt-3 space-y-2">
-                            <li><a href="#" class="text-gray-600 hover:underline">New Collection</a></li>
+                            <li><a href="#" class="text-gray-600 transition-all duration-200 hover:scale-110 hover:text-blue-600 hover:font-semibold">New Collection</a></li>
                             <li><a href="#" class="font-bold">All Products</a></li>
-                            <li><a href="#" class="text-gray-600 hover:underline">Discounted Products</a></li>
+                            <li><a href="#" class="text-gray-600 transition-all duration-200 hover:scale-110 hover:text-blue-600 hover:font-semibold">Discounted Products</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="mt-10">
                     <p class="text-lg font-semibold">Filter by :</p>
                     <ul class="mt-3 space-y-2">
-                        <li><a href="#" class="text-gray-600 hover:underline">Availabilty</a></li>
-                        <li><a href="#" class="text-gray-600 hover:underline">Discounted</a></li>
+                        <li><a href="#" class="text-gray-600 transition-all duration-200 hover:scale-110 hover:text-blue-600 hover:font-semibold">Availabilty</a></li>
+                        <li><a href="#" class="text-gray-600 transition-all duration-200 hover:scale-110 hover:text-blue-600 hover:font-semibold">Discounted</a></li>
                     </ul>
                 </div>
             </div>
         </aside>
 
         <!-- Product Grid -->
-        <section class="w-4/5 grid grid-cols-4 gap-6">
+        <section class="h-full w-4/5 grid grid-cols-4 gap-6">
             <!-- Product Cards -->
-            <div class="bg-pink-100 p-4 rounded-md">
-                <img src="https://via.placeholder.com/200" alt="Clinge Bag" class="w-full rounded-md">
-                <p class="text-lg font-bold mt-3">Clinge Bag</p>
-                <p class="text-gray-700">₹1200</p>
-                <button class="bg-white rounded-full p-2 mt-3 shadow hover:bg-gray-200">+</button>
+            <div class="h-full w-full max-h-96 flex flex-col justify-between bg-pink-100 rounded-md">
+                <img src="/images/bag1.png" alt="Clinge Bag" class="w-full h-full p-4 h-1/2 object-contain rounded-md" >
+                <div class="w-full h-24 p-6 flex justify-between items-center rounded-b-md bg-purple-400">
+                    <div class="flex flex-col justify-between">
+                        <p class="text-lg font-bold ">Clinge Bag</p>
+                        <p class="text-gray-700 font-bold">₹1200</p>    
+                    </div>
+                    <button class="h-10 w-10 text-xl text-center bg-white rounded-full shadow hover:bg-gray-200">+</button>
+                </div>
             </div>
 
             <div class="bg-blue-100 p-4 rounded-md">
