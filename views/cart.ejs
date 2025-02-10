@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop | E-commerce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-gray-900">
+    <!-- Navigation -->
+    <header
+      class="w-full flex justify-between items-center px-20 py-4 border-b"
+    >
+      <h1 class="text-2xl font-bold">Cart.</h1>
+      <nav class="flex gap-6 text-md">
+        <a
+          href="#"
+          class="transition-all duration-200 hover:scale-110 hover:text-blue-600 hover:font-semibold"
+          >Home</a
+        >
+        <a
+          href="#"
+          class="transition-all duration-200 hover:scale-110 hover:text-blue-600 hover:font-semibold"
+          >Products</a
+        >
+        <a
+          href="#"
+          class="transition-all duration-200 hover:scale-110 hover:text-blue-600 hover:font-semibold"
+          >Cart</a
+        >
+        <a
+          href="#"
+          class="transition-all duration-200 hover:scale-110 hover:text-blue-600 hover:font-semibold"
+          >My account</a
+        >
+      </nav>
+    </header>
+
+    <!-- Cart Details -->
+
+    <div class="w-full h-full flex p-20">
+      <!-- bag details  -->
+      <div
+        class="h-full w-1/3 min-h-96 flex flex-col justify-between bg-pink-100 rounded-md"
+      >
+        <img
+          src="/images/bag1.png"
+          alt="Clinge Bag"
+          class="w-full h-full p-4 h-1/2 object-contain rounded-md"
+        />
+        <div
+          class="w-full h-24 p-6 flex justify-between items-center rounded-b-md bg-purple-400"
+        >
+          <div class="flex flex-col justify-between">
+            <p class="text-lg font-bold">Clinge Bag</p>
+            <p class="text-gray-700 font-bold">₹1200</p>
+          </div>
+          <div class="flex justify-between items-center gap-1">
+            <button
+              class="h-8 w-8 text-xl text-center bg-white rounded-full shadow hover:bg-gray-200"
+            >
+              -
+            </button>
+            <input
+              class="h-8 w-8 text-center bg-white rounded-md shadow hover:bg-gray-200 outline-none"
+              type="text"
+              value="1"
+              readonly
+            />
+            <button
+              class="h-8 w-8 text-xl text-center bg-white rounded-full shadow hover:bg-gray-200"
+            >
+              +
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- price breakdown -->
+      <div class="w-full px-8 h-full">
+        <h2 class="font-bold text-lg">Price Breakdown</h2>
+        <div
+          class="md:w-1/2 w-full h-full grid grid-cols-2 grid-rows-6 p-4 gap-2"
+        >
+          
+          <p class="font-semibold">Product MRP</p>
+          <p class="font-semibold">₹1920</p>
+          <p class="font-semibold">Quantity</p>
+          <p class="font-semibold">2</p>
+          <p class="font-semibold">Total MRP</p>
+          <p class="font-extrabold">₹3840</p>
+          <p class="font-semibold">Discount on MRP</p>
+          <p class="font-semibold">₹0</p>
+          <p class="font-semibold">Platform Fee</p>
+          <p class="font-semibold">₹20</p>
+          <p class="font-semibold">Shipping Fee</p>
+          <p class="font-semibold">FREE</p>
+        </div>
+
+        <div class="border-2 border-b rounded-md w-full"></div>
+
+        <div
+          class="md:w-1/2 w-full h-full grid grid-cols-2 grid-rows-1 p-4 gap-2"
+        >
+          <p class="font-semibold">Total Amount</p>
+          <p class="font-extrabold text-teal-600">₹3860</p>
+        </div>
+
+        <button class="p-2 px-4 rounded-md bg-black text-white font-semibold  hover:bg-gray-600">
+          Place Order
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
