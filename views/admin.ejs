@@ -19,6 +19,24 @@
         </nav>
     </header>
 
+    <% if (error.length > 0) { %>
+        <div class="absolute z-10 top-20 left-1/2 -translate-x-1/2 -translate-y-1/2 p-2 px-6 rounded-lg bg-red-500">
+            <span class="inline-block mt-1 mb-1 font-semibold text-white">
+            <%= error%>
+        </span>
+
+        </div>
+       <% } %>
+
+       <% if (success.length > 0) { %>
+        <div class="absolute z-10 top-20 left-1/2 -translate-x-1/2 -translate-y-1/2 p-2 px-6 rounded-lg bg-green-500">
+            <span class="inline-block mt-1 mb-1 font-semibold text-white">
+            <%= success%>
+        </span>
+
+        </div>
+       <% } %>
+
     <!-- Main Content -->
     <div class="flex px-20 py-10 h-[90vh] w-full">
 
