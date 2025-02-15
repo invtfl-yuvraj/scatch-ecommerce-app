@@ -55,65 +55,22 @@
         <!-- Product Grid -->
         <section class="h-full w-4/5 grid grid-cols-4 gap-6">
             <!-- Product Cards -->
-            <div class="h-full w-full max-h-96 flex flex-col justify-between bg-pink-100 rounded-md">
-                <img src="/images/bag1.png" alt="Clinge Bag" class="w-full h-full p-4 h-1/2 object-contain rounded-md" >
-                <div class="w-full h-24 p-6 flex justify-between items-center rounded-b-md bg-purple-400">
-                    <div class="flex flex-col justify-between">
-                        <p class="text-lg font-bold ">Clinge Bag</p>
-                        <p class="text-gray-700 font-bold">₹1200</p>    
+
+            <% products.forEach((product) => { %>
+                <div class= "h-full w-full max-h-96 flex flex-col justify-between bg-[<%=product.bgcolor%>] rounded-md">
+                    <img src="data:image/jpeg;base64,<%= product.image.toString('base64')%>" alt="Product Image" class="w-full h-full p-4 h-1/2 object-contain rounded-md">
+                    
+                    <div class="w-full h-24 p-6 flex justify-between items-center rounded-b-md bg-[<%=product.panelcolor%>]">
+                        <div class="flex flex-col justify-between">
+                            <p class="text-lg font-bold text-[<%=product.textcolor%>]"><%= product.name%></p>
+                            <p class="font-bold text-[<%=product.textcolor%>]">₹ <%= product.price%></p>    
+                        </div>
+                        <button class="h-10 w-10 text-xl text-center bg-white rounded-full shadow hover:bg-gray-200">+</button>
                     </div>
-                    <button class="h-10 w-10 text-xl text-center bg-white rounded-full shadow hover:bg-gray-200">+</button>
                 </div>
-            </div>
+            <% })%>
+            
 
-            <div class="bg-blue-100 p-4 rounded-md">
-                <img src="https://via.placeholder.com/200" alt="Backpack" class="w-full rounded-md">
-                <p class="text-lg font-bold mt-3">Backpack</p>
-                <p class="text-gray-700">₹1100</p>
-                <button class="bg-white rounded-full p-2 mt-3 shadow hover:bg-gray-200">+</button>
-            </div>
-
-            <div class="bg-yellow-100 p-4 rounded-md">
-                <img src="https://via.placeholder.com/200" alt="Multipurpose Bag" class="w-full rounded-md">
-                <p class="text-lg font-bold mt-3">Multipurpose</p>
-                <p class="text-gray-700">₹100</p>
-                <button class="bg-white rounded-full p-2 mt-3 shadow hover:bg-gray-200">+</button>
-            </div>
-
-            <div class="bg-pink-200 p-4 rounded-md">
-                <img src="https://via.placeholder.com/200" alt="Pink Attack" class="w-full rounded-md">
-                <p class="text-lg font-bold mt-3">Pink Attack</p>
-                <p class="text-gray-700">₹1400 <span class="text-red-500 text-sm">-25%</span></p>
-                <button class="bg-white rounded-full p-2 mt-3 shadow hover:bg-gray-200">+</button>
-            </div>
-
-            <div class="bg-gray-200 p-4 rounded-md">
-                <img src="https://via.placeholder.com/200" alt="The Stud" class="w-full rounded-md">
-                <p class="text-lg font-bold mt-3">The Stud</p>
-                <p class="text-gray-700">₹1100</p>
-                <button class="bg-white rounded-full p-2 mt-3 shadow hover:bg-gray-200">+</button>
-            </div>
-
-            <div class="bg-yellow-200 p-4 rounded-md">
-                <img src="https://via.placeholder.com/200" alt="Surprise" class="w-full rounded-md">
-                <p class="text-lg font-bold mt-3">Surprise</p>
-                <p class="text-gray-700">₹1100</p>
-                <button class="bg-white rounded-full p-2 mt-3 shadow hover:bg-gray-200">+</button>
-            </div>
-
-            <div class="bg-black text-white p-4 rounded-md">
-                <img src="https://via.placeholder.com/200" alt="Supreme" class="w-full rounded-md">
-                <p class="text-lg font-bold mt-3">Supreme</p>
-                <p class="text-gray-400">₹1800</p>
-                <button class="bg-gray-800 rounded-full p-2 mt-3 shadow hover:bg-gray-700">+</button>
-            </div>
-
-            <div class="bg-gray-100 p-4 rounded-md">
-                <img src="https://via.placeholder.com/200" alt="The Daily" class="w-full rounded-md">
-                <p class="text-lg font-bold mt-3">The Daily</p>
-                <p class="text-gray-700">₹100</p>
-                <button class="bg-white rounded-full p-2 mt-3 shadow hover:bg-gray-200">+</button>
-            </div>
 
         </section>
     </div>
